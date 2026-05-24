@@ -99,7 +99,6 @@
      net-tools
      libreoffice-still
      wineWow64Packages.stagingFull
-     flatpak
      unar
      lutris
      openrgb-with-all-plugins
@@ -160,13 +159,7 @@
      };
    };
 
-  services.zerotierone = {
-    enable = true;
-    joinNetworks = [
-      ""
-    ];
-  };
-
+  services.zerotierone.enable = true;
   systemd.services.zerotierone.wantedBy = lib.mkForce [];
 
   # Open ports in the firewall.

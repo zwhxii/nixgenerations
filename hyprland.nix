@@ -1,18 +1,15 @@
 { config, pkgs, ... }:
 {
-  # Включаем программу через модуль NixOS
   programs.hyprland = {
     enable = true;
-    xwayland.enable = true;   # поддержка X11-приложений
+    xwayland.enable = true;
   };
 
-  # Wayland-окружение
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";     # electron-приложения через wayland
-#    WLR_NO_HARDWARE_CURSORS = "1";  # если курсор пропадает
+    NIXOS_OZONE_WL = "1";
+   #WLR_NO_HARDWARE_CURSORS = "1"; # если курсор пропадает
   };
 
-  # Нужные пакеты
   environment.systemPackages = with pkgs; [
     waybar
     rofi
@@ -32,5 +29,4 @@
   };
 
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
-
 }
