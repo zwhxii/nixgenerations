@@ -6,7 +6,7 @@
     hyprland.url = "github:hyprwm/Hyprland/v0.55.2"; 
   };
 
-  outputs = { self, nixpkgs, hyprland }: {
+  outputs = inputs @ { self, nixpkgs, hyprland }: {
     nixosConfigurations.NixOSMachine = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
