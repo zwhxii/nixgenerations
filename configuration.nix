@@ -29,12 +29,21 @@
       ./hyprland.nix
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.overlays = [
+    (final: prev: {
+      openldap = prev.openldap.overrideAttrs (_: { doCheck = false; });
+    })
+  ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.kernelModules = [ "dm_mod" "cryptd" "aesni_intel" "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest; # KERNEL LAST VERSION
+  #boot.kernelPackages = pkgs.linuxPackages_latest; # KERNEL LAST VERSION
+
+  boot.kernelPackages = pkgs.linuxPackages_7_0;
 
   networking.hostName = "NixOSMachine";
  
@@ -168,7 +177,7 @@
   # Or disable the firewall altogether.
    networking.firewall.enable = false;
 
-   system.copySystemConfiguration = true;
+   system.copySystemConfiguration = false;
 
   system.stateVersion = "25.11"; # Did you read the comment?
 
