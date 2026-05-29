@@ -18,7 +18,7 @@
     kitty
     grim
     slurp
-    xfce.thunar
+    pkgs.thunar
     hyprpaper
     wl-clipboard
     pywal

@@ -132,7 +132,7 @@
        btoff = "bluetoothctl power off";
        ser = "ssh -t whixie@192.168.0.101";
        _ = "sudo ";
-       hy = "hyprland";
+       hy = "start-hyprland";
        hyex = "hyprctl dispatch exit";
      };
      
