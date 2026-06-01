@@ -18,7 +18,7 @@
     kitty
     grim
     slurp
-    pkgs.thunar
+    thunar
     hyprpaper
     wl-clipboard
     pywal
