@@ -28,6 +28,7 @@
     wl-clipboard
     pywal
     playerctl
+    brightnessctl
   ];
 
   xdg.portal = {
