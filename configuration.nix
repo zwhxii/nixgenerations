@@ -181,7 +181,11 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-   networking.firewall.enable = false;
+   networking.firewall = {
+     enable = true;
+     allowedUDPPorts = [ 27015 26900 ];
+     #allowedTCPPorts = [ 27015 ]; #если надо RCON 
+   };
 
    system.copySystemConfiguration = false;
 
