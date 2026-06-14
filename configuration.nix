@@ -156,6 +156,8 @@
 
   services.flatpak.enable = true;
 
+  programs.gamescope.enable = true;
+
   services.hardware.openrgb.enable = true;
 
    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) ["steam" "steam-unwrapped" "discord" "spotify"];
@@ -174,16 +176,12 @@
      };
    };
 
-  services.zerotierone.enable = true;
-  systemd.services.zerotierone.wantedBy = lib.mkForce [];
+  #services.zerotierone.enable = true;
+  #systemd.services.zerotierone.wantedBy = lib.mkForce [];
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
    networking.firewall = {
      enable = true;
-     allowedUDPPorts = [ 27015 26900 ];
+     #allowedUDPPorts = [ 27015 26900 ];
      #allowedTCPPorts = [ 27015 ]; #если надо RCON 
    };
 
