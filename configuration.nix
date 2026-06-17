@@ -125,6 +125,8 @@
      spotify
    ];
    
+   programs.gamescope.enable = true;
+
    programs.zsh = {
      enable = true;
      enableCompletion = true;
@@ -155,8 +157,6 @@
    };
 
   services.flatpak.enable = true;
-
-  programs.gamescope.enable = true;
 
   services.hardware.openrgb.enable = true;
 
