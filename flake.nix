@@ -6,7 +6,11 @@
     hyprland = {
       url = "github:hyprwm/Hyprland/v0.55.2";
       inputs.nixpkgs.follows = "nixpkgs";
-    }; 
+    };
+#    mangowm = {
+#      url = "github:mangowm/mango/0.14.4";
+#      inputs.nixpkgs.follows = "nixpkgs";
+#    }; 
   };
 
   outputs = inputs @ { self, nixpkgs, hyprland }: {

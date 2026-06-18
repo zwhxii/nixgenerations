@@ -26,6 +26,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      #./mangowm.nix
       ./hyprland.nix
     ];
 
@@ -123,6 +124,8 @@
      libva-utils
      prismlauncher
      spotify
+     #firejail
+     #bubblewrap
    ];
    
    programs.gamescope.enable = true;
