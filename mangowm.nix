@@ -30,7 +30,8 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true; # портал для wlroots (MangoWC основан на wlroots)
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
+    config.common.default = "*";
   };
 
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
