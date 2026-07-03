@@ -3,10 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # или nixos-24.11
-#    hyprland = {
-#      url = "github:hyprwm/Hyprland/v0.55.2";
-#      inputs.nixpkgs.follows = "nixpkgs";
-#    };
     mangowm = {
       url = "github:mangowm/mango/0.14.4";
       inputs.nixpkgs.follows = "nixpkgs";

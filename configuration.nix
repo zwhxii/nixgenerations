@@ -27,7 +27,6 @@
     [ 
       ./hardware-configuration.nix
       ./mangowm.nix
-      #./hyprland.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -113,7 +112,7 @@
      python3
      brave
      net-tools
-     libreoffice-still
+     #libreoffice-still
      wineWow64Packages.stagingFull
      unar
      lutris
@@ -126,38 +125,35 @@
      spotify
      #firejail
      #bubblewrap
-   ];
-   
-   programs.gamescope.enable = true;
+   ]; 
 
-   programs.zsh = {
-     enable = true;
-     enableCompletion = true;
-     autosuggestions.enable = false;
+  #programs.gamescope.enable = true;   
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = false;
      shellAliases = {
-       ff = "fastfetch";
-       susp = "systemctl suspend";
-       shut = "shutdown -P now";
-       bton = "bluetoothctl power on";
-       btoff = "bluetoothctl power off";
-       ser = "ssh -t whixie@192.168.0.101";
-       _ = "sudo ";
-       hy = "start-hyprland";
-       hyex = "hyprctl dispatch exit";
-     };
-     
-     ohMyZsh = {
-       enable = true;
-       theme = "nicoulaj";
-     };
-     
-     histSize = 10000;
-     histFile = "$HOME/.zsh_history";
-     setOptions = [
-       "HIST_IGNORE_ALL_DUPS"
-     ];
-   };
+      ff = "fastfetch";
+      susp = "systemctl suspend";
+      shut = "shutdown -P now";
+      bton = "bluetoothctl power on";
+      btoff = "bluetoothctl power off";
+      ser = "ssh -t whixie@192.168.0.101";
+      _ = "sudo ";
+    };
+    
+    ohMyZsh = {
+      enable = true;
+      theme = "nicoulaj";
+    };
+    
+    histSize = 10000;
+    histFile = "$HOME/.zsh_history";
+    setOptions = [
+      "HIST_IGNORE_ALL_DUPS"
+    ];
+  };
 
   services.flatpak.enable = true;
 
