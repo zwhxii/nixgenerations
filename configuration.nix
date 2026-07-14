@@ -124,6 +124,7 @@
      prismlauncher
      spotify
      wev
+     tldr
      #firejail
      #bubblewrap
    ]; 
