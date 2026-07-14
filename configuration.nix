@@ -113,21 +113,22 @@
      brave
      net-tools
      #libreoffice-still
-     wineWow64Packages.stagingFull
+     #wineWow64Packages.stagingFull
      unar
      lutris
      openrgb-with-all-plugins
      easyeffects
      vulkan-tools
-     obs-studio
-     libva-utils
+     #obs-studio
+     #libva-utils
      prismlauncher
      spotify
+     wev
      #firejail
      #bubblewrap
    ]; 
 
-  #programs.gamescope.enable = true;   
+  programs.gamescope.enable = true;
 
   programs.zsh = {
     enable = true;
