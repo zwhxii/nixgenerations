@@ -123,13 +123,10 @@
      #libva-utils
      prismlauncher
      spotify
-     wev
      tldr
      #firejail
      #bubblewrap
    ]; 
-
-  programs.gamescope.enable = true;
 
   programs.zsh = {
     enable = true;
@@ -182,11 +179,18 @@
 
    networking.firewall = {
      enable = true;
-     #allowedUDPPorts = [ 27015 26900 ];
-     #allowedTCPPorts = [ 27015 ]; #если надо RCON 
+     #allowedUDPPorts = [ 27015 26900 ]; #Half-Life
+     #allowedTCPPorts = [ 80 443 6672 61455 61456 61457 61458 ]; #GTA Online и RDO?
+     #allowedUDPPorts = [ 6672 61455 61456 61457 61458 ];
    };
 
-   system.copySystemConfiguration = false;
+  networking.extraHosts = ''
+    127.0.0.1 paradise-s1.battleye.com
+    127.0.0.1 test-s1.battleye.com
+    127.0.0.1 paradiseenhanced-s1.battleye.com
+  '';
+
+  system.copySystemConfiguration = false;
 
   system.stateVersion = "25.11"; # Did you read the comment?
 
