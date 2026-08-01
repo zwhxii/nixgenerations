@@ -43,7 +43,7 @@
 
   #boot.kernelPackages = pkgs.linuxPackages_latest; # KERNEL LAST VERSION
 
-  boot.kernelPackages = pkgs.linuxPackages_7_0;
+  boot.kernelPackages = pkgs.linuxPackages_7_1;
 
   networking.hostName = "NixOSMachine";
  
@@ -180,7 +180,7 @@
    networking.firewall = {
      enable = true;
      #allowedUDPPorts = [ 27015 26900 ]; #Half-Life
-     #allowedTCPPorts = [ 80 443 6672 61455 61456 61457 61458 ]; #GTA Online и RDO?
+     #allowedTCPPorts = [ 6672 61455 61456 61457 61458 ]; #GTA Online и RDO?
      #allowedUDPPorts = [ 6672 61455 61456 61457 61458 ];
    };
 

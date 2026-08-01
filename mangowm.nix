@@ -1,6 +1,8 @@
 { config, pkgs, inputs, ... }:
 {
 
+  disabledModules = [ "/nix/store/j3wl46dgzlyr8bhqh0k24any86x0wn1j-source/nixos/modules/programs/wayland/mango.nix" ];
+
   imports = [
     inputs.mangowm.nixosModules.mango
   ];
