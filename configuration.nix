@@ -27,6 +27,7 @@
     [ 
       ./hardware-configuration.nix
       ./mangowm.nix
+#      ./dwlc.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
