@@ -27,7 +27,6 @@
     [ 
       ./hardware-configuration.nix
       ./mangowm.nix
-#      ./dwlc.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -97,7 +96,7 @@
        tree
      ];
    };
-
+#
   #programs.firefox.enable = true;
    programs.steam.enable = true;
    hardware.bluetooth.enable = true;
@@ -111,22 +110,19 @@
      discord
      fastfetch
      python3
-     brave
+     librewolf
      net-tools
-     #libreoffice-still
-     #wineWow64Packages.stagingFull
      unar
      lutris
      openrgb-with-all-plugins
      easyeffects
      vulkan-tools
-     #obs-studio
-     #libva-utils
      prismlauncher
      spotify
      tldr
-     #firejail
-     #bubblewrap
+     throne
+     #libva-utils
+     #obs-studio
    ]; 
 
   programs.zsh = {

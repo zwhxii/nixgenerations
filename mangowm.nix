@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
 
-  disabledModules = [ "/nix/store/j3wl46dgzlyr8bhqh0k24any86x0wn1j-source/nixos/modules/programs/wayland/mango.nix" ];
+  disabledModules = [ "/nix/store/cc7ff4ysismx0c3778v8gc6b14plrz3z-source/nixos/modules/programs/wayland/mango.nix" ];
 
   imports = [
     inputs.mangowm.nixosModules.mango
@@ -28,6 +28,7 @@
     playerctl    
     xdg-desktop-portal-wlr 
   ];
+
 
   xdg.portal = {
     enable = true;
