@@ -6,7 +6,11 @@
     mangowm = {
       url = "github:mangowm/mango/0.14.4";
       inputs.nixpkgs.follows = "nixpkgs";
-    }; 
+    };
+#    river = {
+#      url = "https://codeberg.org/river/river/archive/v0.4.8.tar.gz";
+#      flake = false;
+#    }; 
   };
 
   outputs = inputs @ { self, nixpkgs, mangowm }: {

@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
 
-  disabledModules = [ "/nix/store/cc7ff4ysismx0c3778v8gc6b14plrz3z-source/nixos/modules/programs/wayland/mango.nix" ];
+  disabledModules = [ "/nix/store/ab93n7qqycnn3xfdnav0wnqqigvddd5r-source/nixos/modules/programs/wayland/mango.nix" ];
 
   imports = [
     inputs.mangowm.nixosModules.mango
@@ -26,7 +26,7 @@
     thunar       
     wl-clipboard 
     playerctl    
-    xdg-desktop-portal-wlr 
+    xdg-desktop-portal-wlr
   ];
 
 

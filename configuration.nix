@@ -27,6 +27,7 @@
     [ 
       ./hardware-configuration.nix
       ./mangowm.nix
+#      ./river.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -155,7 +156,7 @@
 
   services.hardware.openrgb.enable = true;
 
-   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) ["steam" "steam-unwrapped" "discord" "spotify"];
+   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) ["steam" "steam-unwrapped" "discord" "discord-unwrapped" "spotify"];
 
    programs.mtr.enable = true;
    programs.gnupg.agent = {
