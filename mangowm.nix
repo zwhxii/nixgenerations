@@ -23,7 +23,7 @@
     grim       
     slurp       
     swaybg
-    thunar       
+    yazi
     wl-clipboard 
     playerctl
     xdg-desktop-portal-wlr
