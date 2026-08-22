@@ -27,7 +27,6 @@
     [ 
       ./hardware-configuration.nix
       ./mangowm.nix
-#      ./river.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -130,15 +129,15 @@
     enable = true;
     enableCompletion = true;
     autosuggestions.enable = false;
-     shellAliases = {
-      ff = "fastfetch";
-      susp = "systemctl suspend";
-      shut = "shutdown -P now";
-      bton = "bluetoothctl power on";
-      btoff = "bluetoothctl power off";
-      ser = "ssh -t whixie@192.168.0.101";
-      _ = "sudo ";
-    };
+    shellAliases = {
+     ff = "fastfetch";
+     susp = "systemctl suspend";
+     shut = "shutdown -P now";
+     bton = "bluetoothctl power on";
+     btoff = "bluetoothctl power off";
+     ser = "ssh -t whixie@192.168.0.101";
+     _ = "sudo ";
+   };
     
     ohMyZsh = {
       enable = true;

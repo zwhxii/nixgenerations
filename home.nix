@@ -4,10 +4,10 @@
   services.wlsunset = {
     enable = true;
     temperature = {
-      day = 6500;
-      night = 3000;
+      day = 7500;
+      night = 4000;
     };
     sunrise = "08:00";
     sunset = "22:00";
-  };  
+  };
 }

@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
 
-  disabledModules = [ "/nix/store/ab93n7qqycnn3xfdnav0wnqqigvddd5r-source/nixos/modules/programs/wayland/mango.nix" ];
+  disabledModules = [ "/nix/store/jpnpv93s5ppfb1kbvfp8qa763vfb4fjb-source/nixos/modules/programs/wayland/mango.nix" ]; # деривация меняется при flake update, заменять
 
   imports = [
     inputs.mangowm.nixosModules.mango
@@ -12,8 +12,8 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     XDG_SESSION_TYPE = "wayland";
-    XDG_CURRENT_DESKTOP = "mango";
-    # WLR_NO_HARDWARE_CURSORS = "1"; # если курсор пропадает
+    #XDG_CURRENT_DESKTOP = "mango";
+    # WLR_NO_HARDWARE_CURSORS = "1"; 
   };
 
   environment.systemPackages = with pkgs; [
@@ -25,14 +25,14 @@
     swaybg
     thunar       
     wl-clipboard 
-    playerctl    
+    playerctl
     xdg-desktop-portal-wlr
   ];
 
 
   xdg.portal = {
     enable = true;
-    wlr.enable = true; # портал для wlroots (MangoWC основан на wlroots)
+    wlr.enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
     config.common.default = "*";
   };
