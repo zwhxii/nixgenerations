@@ -5,7 +5,7 @@
     enable = true;
     temperature = {
       day = 7500;
-      night = 4000;
+      night = 3500;
     };
     sunrise = "08:00";
     sunset = "22:00";

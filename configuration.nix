@@ -130,14 +130,15 @@
     enableCompletion = true;
     autosuggestions.enable = false;
     shellAliases = {
-     ff = "fastfetch";
-     susp = "systemctl suspend";
-     shut = "shutdown -P now";
-     bton = "bluetoothctl power on";
-     btoff = "bluetoothctl power off";
-     ser = "ssh -t whixie@192.168.0.101";
-     _ = "sudo ";
-   };
+      ff = "fastfetch --logo ~/Pictures/malologo.png";
+      ffs = "fastfetch";
+      susp = "systemctl suspend";
+      shut = "shutdown -P now";
+      bton = "bluetoothctl power on";
+      btoff = "bluetoothctl power off";
+      ser = "ssh -t whixie@192.168.0.101";
+      _ = "sudo ";
+    };
     
     ohMyZsh = {
       enable = true;
