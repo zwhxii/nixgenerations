@@ -114,6 +114,7 @@
      net-tools
      unar
      lutris
+     libremines
      openrgb-with-all-plugins
      easyeffects
      vulkan-tools
