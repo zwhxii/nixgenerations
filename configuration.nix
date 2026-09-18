@@ -43,7 +43,7 @@
 
   #boot.kernelPackages = pkgs.linuxPackages_latest; # KERNEL LAST VERSION
 
-  boot.kernelPackages = pkgs.linuxPackages_7_1;
+  boot.kernelPackages = pkgs.linuxPackages_7_2;
 
   networking.hostName = "NixOSMachine";
  
@@ -67,12 +67,12 @@
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.options = "caps:escape";
 
-  services.printing.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
+#  services.printing.enable = true;
+#  services.avahi = {
+#    enable = true;
+#    nssmdns4 = true;
+#    openFirewall = true;
+#  };
 
 
   # services.pulseaudio.enable = true;
@@ -114,7 +114,6 @@
      net-tools
      unar
      lutris
-     libremines
      openrgb-with-all-plugins
      easyeffects
      vulkan-tools

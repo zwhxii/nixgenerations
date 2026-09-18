@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
 
-  disabledModules = [ "/nix/store/jpnpv93s5ppfb1kbvfp8qa763vfb4fjb-source/nixos/modules/programs/wayland/mango.nix" ]; # деривация меняется при flake update, заменять
+  disabledModules = [ "/nix/store/bgxq0a75z1gzy3x90x0bp6bx2ayigj1j-source/nixos/modules/programs/wayland/mango.nix" ]; # деривация меняется при flake update, заменять
 
   imports = [
     inputs.mangowm.nixosModules.mango
@@ -29,6 +29,13 @@
     xdg-desktop-portal-wlr
   ];
 
+#  nixpkgs.overlays = [
+#    (final: prev: {
+#      xdg-desktop-portal = prev.xdg-desktop-portal.overrideAttrs (oldAttrs: {
+#        doCheck = false;
+#      });
+#    })
+#  ];
 
   xdg.portal = {
     enable = true;

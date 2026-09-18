@@ -7,7 +7,7 @@
       day = 7500;
       night = 3500;
     };
-    sunrise = "08:00";
+    sunrise = "07:00";
     sunset = "22:00";
   };
 }
