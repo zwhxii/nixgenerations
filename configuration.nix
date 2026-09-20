@@ -121,6 +121,7 @@
      spotify
      tldr
      throne
+     ani-cli
      #libva-utils
      #obs-studio
    ]; 
