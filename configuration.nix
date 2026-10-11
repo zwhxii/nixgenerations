@@ -122,6 +122,7 @@
      tldr
      throne
      ani-cli
+     pavucontrol
      #libva-utils
      #obs-studio
    ]; 
