@@ -120,12 +120,17 @@
      prismlauncher
      spotify
      tldr
-     throne
      ani-cli
      pavucontrol
+     qpwgraph
      #libva-utils
      #obs-studio
    ]; 
+
+  programs.throne = {
+    enable = true;
+    tunMode.enable = true;
+  };
 
   programs.zsh = {
     enable = true;
