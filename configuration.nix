@@ -144,6 +144,7 @@
       bton = "bluetoothctl power on";
       btoff = "bluetoothctl power off";
       ser = "ssh -t whixie@192.168.0.101";
+      config = "sudo vim ~/.config/mango/config.conf";
       _ = "sudo ";
     };
     
