@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
 
-  disabledModules = [ "/nix/store/rhsxvv1380jmchb5p3a43d24mhlmp2ry-source/nixos/modules/programs/wayland/mango.nix" ]; # деривация меняется при flake update, заменять
+  disabledModules = [ "/nix/store/yxkqzvl5bf7knrh55lbl5xjxksq6ydmp-source/nixos/modules/programs/wayland/mango.nix" ]; # деривация меняется при flake update, заменять
 
   imports = [
     inputs.mangowm.nixosModules.mango

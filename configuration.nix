@@ -43,7 +43,7 @@
 
   #boot.kernelPackages = pkgs.linuxPackages_latest; # KERNEL LAST VERSION
 
-  boot.kernelPackages = pkgs.linuxPackages_7_2;
+  boot.kernelPackages = pkgs.linuxPackages_7_3;
 
   networking.hostName = "NixOSMachine";
  
@@ -125,7 +125,13 @@
      qpwgraph
      #libva-utils
      #obs-studio
-   ]; 
+   ];
+
+#  virtualisation.waydroid.enable = true;
+#  networking.nftables.enable = true;
+#  networking.firewall.trustedInterfaces = [ "waydroid0" ];
+#  boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
+
 
   programs.throne = {
     enable = true;
@@ -185,6 +191,7 @@
 
    networking.firewall = {
      enable = true;
+     allowedTCPPorts = [ 2080 ]; #порт прокси
      #allowedUDPPorts = [ 27015 26900 ]; #Half-Life
      #allowedTCPPorts = [ 6672 61455 61456 61457 61458 ]; #GTA Online и RDO?
      #allowedUDPPorts = [ 6672 61455 61456 61457 61458 ];

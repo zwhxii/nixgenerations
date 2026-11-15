@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-old-lo.url = "github:NixOS/nixpkgs/044bfe75bfe4c7bbe043dc17b5e42ea823b84a09";
     mangowm = {
-      url = "github:mangowm/mango/0.14.4";
+      url = "github:mangowm/mango/0.18.5";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
