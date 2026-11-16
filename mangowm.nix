@@ -27,6 +27,7 @@
     wl-clipboard 
     playerctl
     xdg-desktop-portal-wlr
+    wayfreeze
   ];
 
 #  nixpkgs.overlays = [

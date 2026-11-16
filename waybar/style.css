@@ -1,0 +1,182 @@
+/* fragile file path */
+@import url("../../.cache/wal/colors-waybar.css");
+
+/* Use Pywal16 colors  */
+@define-color fg alpha(@background, 1.0);
+@define-color bg alpha(@foreground, 1.0);
+@define-color bordercolor alpha(@background, 1.0);
+@define-color alert #F14241;
+@define-color disabled #A5A5A5;
+@define-color highlight #D49621;
+@define-color activegreen #26A65B;
+@define-color malowhite #c2b8ae;
+
+* {
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem; /* Adjust font using gtk-font size, like nwg-look or lxappearance */
+}
+
+#window,
+#waybar {
+  color: @bordercolor;
+  background-color: transparent;
+}
+#workspaces {
+  color: @malowhite;
+  background-color: @color3;
+  border: 0.1rem solid @bordercolor;
+  border-radius: 0.6rem;
+  padding: 0.1rem 0.5rem;
+  margin: 0.1rem;
+}
+
+#workspaces button {
+  color: @malowhite;
+  background-color: @color3;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  padding: 0.1rem 0.4rem;
+  margin: 0.1rem;
+  border-radius: 0.4rem;
+}
+
+/* Mango marks empty workspaces; occupied ones have no .empty class. */
+#workspaces button:not(.empty) {
+  color: @bordercolor;
+  background-color: @color6;
+}
+
+#workspaces button.active,
+#workspaces button.overview {
+  color: @bordercolor;
+  background-color: @color7;
+}
+
+#workspaces button.urgent {
+  background-color: @alert;
+  color: @fg;
+}
+
+#clock,
+#cava,
+#battery,
+#bluetooth,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#language,
+#backlight,
+#backlight-slider,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#taskbar,
+#tray,
+#tray menu,
+#tray > .needs-attention,
+#tray > .passive,
+#tray > .active,
+#mode,
+#scratchpad,
+#custom-notification,
+#custom-temp,
+#custom-wifi,
+#custom-kdeconnect,
+#custom-bluetooth,
+#custom-power,
+#custom-separator,
+#custom-group,
+#idle_inhibitor,
+#window,
+#mpd {
+  color: #ffffff;
+  background-color: @bg;
+  border: 0.1rem solid @bordercolor;
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  margin: 0.1rem;
+}
+
+#bluetooth {
+  color: @malowhite;
+  background-color: @color1;
+}
+#battery,
+#network {
+  color: @malowhite;
+  background-color: @color2;
+}
+#cpu {
+  color: @malowhite;
+  background-color: @color3;
+}
+#memory {
+  color: @malowhite;
+  background-color: @color4;
+}
+#temperature {
+  color: @bordercolor;
+  background-color: @color5;
+}
+#custom-notification,
+#backlight {
+  color: @bordercolor;
+  background-color: @color6;
+}
+#pulseaudio,
+#wireplumber {
+  color: @malowhite;
+  background-color: @color3;
+}
+#clock {
+  color: @malowhite;
+  background-color: @color9;
+}
+
+#tray,
+#tray menu,
+#tray > .needs-attention,
+#tray > .passive,
+#tray > .active,
+#custom-wifi,
+#custom-kdeconnect,
+#custom-bluetooth,
+#custom-power,
+#custom-group,
+#idle_inhibitor {
+  color: @malowhite;
+  background-color: @color4;
+  border: 0rem solid @bordercolor;
+}
+#window {
+  color: @malowhite;
+  background-color: @color2;
+}
+
+#custom-group {
+  border: 0.1rem solid @bordercolor;
+}
+
+#custom-separator {
+  color: @disabled;
+}
+
+#network.disconnected,
+#pulseaudio.muted,
+#wireplumber.muted {
+  background-color: @alert;
+}
+
+#battery.charging,
+#battery.plugged {
+  background-color: @activegreen;
+}
+
+label:focus {
+  background-color: @bg;
+}

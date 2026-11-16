@@ -123,6 +123,7 @@
      ani-cli
      pavucontrol
      qpwgraph
+     codex
      #libva-utils
      #obs-studio
    ];
