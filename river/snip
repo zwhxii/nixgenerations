@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ ${1:-} == --capture ]]; then
+    trap 'kill -TERM "$RIVER_WAYFREEZE_PID" 2>/dev/null || true' EXIT
+    region=$(slurp)
+    [[ -n $region ]] || exit 0
+    grim -l 0 -g "$region" - | wl-copy --type image/png
+    exit
+fi
+
+export RIVER_WAYFREEZE_PID=$$
+exec wayfreeze --after-freeze-cmd 'exec "${XDG_CONFIG_HOME:-$HOME/.config}/river/snip" --capture'

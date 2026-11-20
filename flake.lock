@@ -86,11 +86,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794386569,
-        "narHash": "sha256-x9sADJvoVG0L6RejZB+/BB4YiGZFBZrfTlhF4uBq1tQ=",
+        "lastModified": 1795085501,
+        "narHash": "sha256-S5keGWzaKpuXo9MNoIC2FfTIuTyTnx8P4NhYJMEsTLI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
+        "rev": "0bb8272318b4ca41bf0edc6224df3e3e3046b70d",
         "type": "github"
       },
       "original": {
@@ -131,12 +131,30 @@
         "type": "github"
       }
     },
+    "river": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794312535,
+        "narHash": "sha256-KruHfjLQ2EXjzx2FwcVkDpIEMH+2YOTzpazu4u6iWkY=",
+        "ref": "refs/tags/v0.3.18",
+        "rev": "73a2e17a343c76ff5f33e739b93aae79c51001fc",
+        "revCount": 1395,
+        "type": "git",
+        "url": "https://codeberg.org/river/river-classic.git"
+      },
+      "original": {
+        "ref": "refs/tags/v0.3.18",
+        "type": "git",
+        "url": "https://codeberg.org/river/river-classic.git"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "mangowm": "mangowm",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-old-lo": "nixpkgs-old-lo"
+        "nixpkgs-old-lo": "nixpkgs-old-lo",
+        "river": "river"
       }
     },
     "scenefx": {

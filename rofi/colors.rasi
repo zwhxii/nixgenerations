@@ -1,0 +1,127 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+* {
+  font:                   "JetBrainsMono Nerd Font 12";
+  highlight:              #F1EDEE;
+  /* foreground:             #C8C093; */
+  /* background:             #1F1F28; */
+  /* text:                   @background; */
+  text:                   #c2b8ae;
+  light:                  @active-background;
+  dark:                   @urgent-background;
+}
+
+
+element-icon {
+  size: 18;
+}
+
+element-text {
+  highlight:        @highlight;
+}
+
+window {
+  border-color:     @light;
+  background-color: @dark;
+  text-color:       @text;
+}
+
+
+listview-split {
+  border-color:     @light;
+  background-color: @dark;
+  text-color:       @text;
+}
+
+wrap {
+  border-color:     @light;
+  background-color: @dark;
+  text-color:       @text;
+}
+
+mainbox {
+  border-color:     @light;
+  background-color: @dark;
+  text-color:       @text;
+}
+
+inputbar {
+  text-color:       @text;
+  background-color: @light;
+}
+
+prompt {
+  text-color:       @dark;
+  background-color: @light;
+}
+
+textbox-prompt-colon {
+  text-color:       @text;
+  background-color: @light;
+}
+
+entry {
+  text-color:        @text;
+  background-color:  @light;
+  placeholder-color: @dark;
+}
+
+message {
+  text-color: @text;
+  background-color: @light;
+}
+
+listview {
+  background-color: @dark;
+  text-color:       @light;
+}
+
+mode-switcher {
+  text-color:       @text;
+  background-color: @dark;
+}
+
+button {
+  text-color:       @text;
+  background-color: @dark;
+}
+
+button selected {
+  text-color:       @text;
+  background-color: @light;
+}
+
+element {
+  text-color:       @text;
+  background-color: @light;
+}
+
+element normal.normal {
+  text-color:       @text;
+  background-color: @dark;
+}
+
+element normal.active {
+  text-color:       @text;
+  background-color: @light;
+}
+
+element selected.normal {
+  text-color:       @text;
+  background-color: @light;
+}
+
+element selected.active {
+  text-color:       @text;
+  background-color: @light;
+}
+
+element alternate.normal {
+  text-color:       @text;
+  background-color: @dark;
+}
+
+element alternate.active {
+  text-color:       @text;
+  background-color: @light;
+}
+
