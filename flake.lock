@@ -131,30 +131,12 @@
         "type": "github"
       }
     },
-    "river": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1794312535,
-        "narHash": "sha256-KruHfjLQ2EXjzx2FwcVkDpIEMH+2YOTzpazu4u6iWkY=",
-        "ref": "refs/tags/v0.3.18",
-        "rev": "73a2e17a343c76ff5f33e739b93aae79c51001fc",
-        "revCount": 1395,
-        "type": "git",
-        "url": "https://codeberg.org/river/river-classic.git"
-      },
-      "original": {
-        "ref": "refs/tags/v0.3.18",
-        "type": "git",
-        "url": "https://codeberg.org/river/river-classic.git"
-      }
-    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "mangowm": "mangowm",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-old-lo": "nixpkgs-old-lo",
-        "river": "river"
+        "nixpkgs-old-lo": "nixpkgs-old-lo"
       }
     },
     "scenefx": {

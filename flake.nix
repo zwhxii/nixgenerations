@@ -8,23 +8,22 @@
       url = "github:mangowm/mango/0.18.5";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    river = {
-      url = "git+https://codeberg.org/river/river-classic.git?ref=refs/tags/v0.3.18";
-      flake = false;
-    };
+#    river = {
+#      url = "git+https://codeberg.org/river/river-classic.git?ref=refs/tags/v0.3.18";
+#      flake = false;
+#    };
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, mangowm, river, home-manager, nixpkgs-old-lo }: {
+  outputs = inputs @ { self, nixpkgs, mangowm, home-manager, nixpkgs-old-lo }: {
     nixosConfigurations.NixOSMachine = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
-        ./river/river.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
@@ -32,12 +31,6 @@
           home-manager.users.whixie = ./home.nix;
         }
         ({ pkgs, ... }: {
-          programs.river-classic.package = pkgs.river-classic.overrideAttrs (_: {
-            version = "0.3.18";
-            src = river.outPath;
-            patches = [ ];
-          });
-
           environment.systemPackages = [
             nixpkgs-old-lo.legacyPackages.x86_64-linux.libreoffice-fresh
           ];
